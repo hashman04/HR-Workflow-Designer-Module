@@ -1,0 +1,25 @@
+
+C:\Users\ayush\OneDrive\Desktop\tredence\src\components\KeyValueInput.tsx
+  2:51  error  'FieldValues' is defined but never used   @typescript-eslint/no-unused-vars
+  6:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  7:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\ayush\OneDrive\Desktop\tredence\src\context\WorkflowContext.tsx
+  125:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\ayush\OneDrive\Desktop\tredence\src\forms\AutomatedNodeForm.tsx
+  11:34  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+C:\Users\ayush\OneDrive\Desktop\tredence\src\forms\AutomatedNodeForm.tsx:11:34
+   9 |     const { register, handleSubmit, reset, watch } = useForm<NodeData>();
+  10 |     const [automations, setAutomations] = useState<Automation[]>([]);
+> 11 |     const selectedAutomationId = watch('automationId');
+     |                                  ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  12 |
+  13 |     useEffect(() => {
+  14 |         getAutomations().then(setAutomations);  react-hooks/incompatible-library
+
+✖ 5 problems (4 errors, 1 warning)
+
